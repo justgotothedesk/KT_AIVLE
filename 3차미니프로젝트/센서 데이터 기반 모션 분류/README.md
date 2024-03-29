@@ -86,5 +86,43 @@
 
 # 데이터 전처리
 
-1. 결측치의 값을 평균값으로 채운다.
-2. 유클리드 Norm을 통하여 A, B 데이터 각각의 Norm 값을 채운다.
+1. timestamp column을 삭제한다
+2. 결측치의 값을 평균값으로 채운다.
+3. 결측치를 삭제한다. (10만개의 데이터 → 53000개의 데이터)
+4. 유클리드 Norm을 통하여 A, B 데이터 각각의 Norm 값을 채운다.
+5. 모델링 1을 하면서 결과가 너무 처참한 것을 확인할 수 있었다. → timestamp를 버리지 말고, hour, minute, second로 나눠서 실험을 해보자. 늦은 시간에는 자전거를 탈 일이 적고 행동이 작아진다.
+6. 그리고 특정 Label의 비율이 불균형이 것을 확인할 수 있었다. → **SMOTE** 라이브러리를 활용하여 Label을 균일한 비율로 만들어주자
+
+# 모델링
+
+1. MLPClassifier(hidden_layer_sizes=(100, 50), max_iter=500, random_state=42)
+    1. Accuracy: 0.84765
+    2. 앉아있기, 누워있기, 자전거 타기는 0.98정도로 분류를 매우 잘함
+    3. 반면, 계단 내려가기는 0.57로 정확도가 매우 떨어지는 모습을 확인할 수 있음(label의 빈도를 확인했을 때, 가장 비율이 낮은 데이터였음. 따라서 불균형으로 인해 성능이 떨어진 것은 아닐까)
+    4. 나머지는 0.70 ~ 0.89로 나쁘지 않은 편
+    5. 계단 내려가기를 잘 해결해야 결과가 좋을 듯 함
+    6. test data의 결과는 0.61848로 좋지는 않다
+2. VotingClassifier(RandomForestClassifier, ExtraTreesClassifier, LinearSVC, MLPClassifier)
+    1. Accuracy : 0.9679509755582165
+    2. 천천히 걷기가 0.82로 정확도가 제일 낮았음
+    3. test data의 결과는 **0.96947**로 오히려 더 성능이 좋아진 것을 확인할 수 있었음!
+3. StackingClassifier(RandomForestClassifier, ExtraTreesClassifier, MLPClassifier) (LinearSVC는 Voting에서의 성능이 제일 낮아서 제외함. 학습 시간을 줄이기 위해서임)
+    1. Accuracy : 0.9929562583644432
+    2. Voting에서의 천천히 걷기가 0.82 → 0.99로 매우 상향되었다
+    3. test data의 결과는 **0.98919**으로 Voting 모델보다 성능이 좋아졌으나, 과적합이 발생하였다.
+4. StackingClassifier(RandomForestClassifier, ExtraTreesClassifier, MLPClassifier, KNeighborsClassifier, XGBClassifier)
+    1. Accuracy : 0.9952806931041769
+    2. test data의 결과는 **0.99304**으로 이전 모델보다 성능이 좋아졌을 뿐만 아니라, 과적합도 덜 일어난 모습이다.
+    3. 추가적으로 다른 모델들을 실험해보고 싶었으나, 학습 시간이 너무 길어서 마감되었다 ㅠ
+
+# 다른 분들은
+
+시간, 분, 초만 나눴던 나와 다르게 밀리 초까지 나누는 분들도 계셨다.
+
+시간 순서대로 정렬하고 보았을 때, 특정 시간 때에 label이 모여있었다.
+
+결측치가 너무 깔끔하게 없어져있다. 인위적으로 낸 것이므로 근처의 비슷한 값을 채워넣었다.
+
+결측치를 선형보간법을 통해서 채웠다.
+
+성능 좋은 하이퍼파라미터를 선택해주는 optuna 라이브러리를 사용하여 하이퍼파라미터를 선택하였다.
