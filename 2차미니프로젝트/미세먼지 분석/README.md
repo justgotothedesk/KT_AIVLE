@@ -49,7 +49,7 @@
 
 # 결과 이해
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e81b6490-64f0-4868-94c8-f9c1978f04a3/e49f3d1d-9ed2-4471-b0b3-0614b6448983/Untitled.png)
+![Untitled](https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/b83c9911-998a-4596-b0e8-c8b0ae385db8)
 
 PM 25, CO, Month도 중요도가 높음
 
