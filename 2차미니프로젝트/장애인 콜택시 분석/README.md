@@ -34,9 +34,9 @@ Target : 다음날의 평균대기시간. 기상 예보를 바탕으로 다음 �
     - 평균 대기시간은 접수건과 꽤나 관련이 있고 나머지는 관련이 없어인다.
     - 따라서, 기상에 따른 접수건을 비교하는게 바람직해 보임
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e81b6490-64f0-4868-94c8-f9c1978f04a3/f831a7b7-142d-4604-b672-a2df2092091e/Untitled.png)
+    ![2](https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/992c6d7e-8f50-4763-8a6a-64703e14d583)
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e81b6490-64f0-4868-94c8-f9c1978f04a3/1431e7e3-4c06-419e-947c-b32dad66edea/Untitled.png)
+    ![3](https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/6f8c34cd-8ecc-44b0-a7e2-1ce1e6c0d9ec)
     
 - 요일별, 월별, 일별, 연간에 따라서 얼마나 탑승을 하는 지 분석
     - 일별 : 나머지는 비등비등하나, 31일이 특히나 이용 승객이 적음(31일이 있는 달이 적어서 그렇지 않나 추정)
@@ -48,7 +48,7 @@ Target : 다음날의 평균대기시간. 기상 예보를 바탕으로 다음 �
     - 하지만 평균 대기 시간의 이상치인 데이터들(매우 큰 시간)은 거의 다 비가 오는 날임
 - target과 가장 상관관계가 높은 5개의 데이터는 'target', '7days', 'average_waiting_time', 'receipt_count', 'month’
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e81b6490-64f0-4868-94c8-f9c1978f04a3/363c1b93-bfe0-4335-902e-a1734b8543ba/Untitled.png)
+![4](https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/7919656d-1ec0-42cb-8c9d-228ae102b7c6)
 
 # 데이터 전처리
 
@@ -63,7 +63,7 @@ Target : 다음날의 평균대기시간. 기상 예보를 바탕으로 다음 �
 
 → 가장 결과가 좋은 모델은 LinearRegression, 하지만 그래프 상에서는 Random Forest가 더 좋아보인다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e81b6490-64f0-4868-94c8-f9c1978f04a3/6700bd6b-9321-426c-bb39-c0482d1c35fd/Untitled.png)
+![5](https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/19d078ab-48d9-4253-a071-22179d4ff68d)
 
 # 팀원들의 인사이트
 
@@ -85,11 +85,11 @@ Target : 다음날의 평균대기시간. 기상 예보를 바탕으로 다음 �
 - 가장 중요도가 높은 항목 : “7일간의 평균대기시간”(2위는 접수건)
 - week, year, day 항목을 뺏을 때가 오히려 모델의 성능이 높았다. (MAE 0.3 감소)
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e81b6490-64f0-4868-94c8-f9c1978f04a3/3256b235-0788-49f5-9e72-7fab1b0603d1/Untitled.png)
+    ![6](https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/60339156-f666-4d8d-b504-52c4c6e569e3)
     
 - 그럼 왜 높은걸까?
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e81b6490-64f0-4868-94c8-f9c1978f04a3/d7f16a7b-f621-46ee-a11b-2b4a382430ab/Untitled.png)
+<img width="578" alt="7" src="https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/bde786d6-46b3-4477-abed-763c0a30921c">
 
 - 위의 사진을 보면 2018년의 값이 눈에 띌 정도로 높아짐. 저 달이 택시 파업이 있던 날임.
 - 따라서 특정 사건에 관련된 변수가 많기 때문에 week, year, day와 같이 날짜를 신경쓰지 않는 것이 성능이 높은 것으로 추정
