@@ -28,7 +28,7 @@ KT 광화문 지사의 버스정류장 번호는 ? → 01118
 
 ## 1-1 파일
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e81b6490-64f0-4868-94c8-f9c1978f04a3/1a2cd1e8-0af6-4948-88ad-6b9f0b99e47e/Untitled.png)
+![1](https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/af911ba9-2e65-4c28-a2bc-9574da6dbbfa)
 
 1. 중구가 인구가 제일 적은 구인 만큼 정류장의 수가 가장 작았다. 하지만, 송파구가 가장 인구가 많다고 해서 정류장 수가 제일 많은 것도 아니였다.
 
@@ -40,7 +40,7 @@ KT 광화문 지사의 버스정류장 번호는 ? → 01118
 
 ## 1-2 파일
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e81b6490-64f0-4868-94c8-f9c1978f04a3/3f7b9423-39f7-4f9b-beae-360732973fb7/Untitled.png)
+![2](https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/59e93786-c116-404d-b903-1417d73b4e80)
 
 1. 이동인구의 수는 1.5명 정도가 압도적으로 많았다. 그 다음은 6명 정도였다.
 
@@ -60,7 +60,7 @@ KT 광화문 지사의 버스정류장 번호는 ? → 01118
 
 ## 1-3 파일
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e81b6490-64f0-4868-94c8-f9c1978f04a3/7715321a-47b3-487d-a71c-c43b7f28e14e/Untitled.png)
+![3](https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/39548980-7e38-42d2-83c7-943cfe64069e)
 
 1. 서울에 거주하는 남녀의 비율은 상당히 동일하다. (여자가 조금 더 높긴함)
 
