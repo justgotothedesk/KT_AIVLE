@@ -21,7 +21,7 @@
 - Roboflow를 사용하여 자동으로 데이터 증강을 해주고 resizing을 해서 인공지능 모델을 설계했다
 - 초기에는 바운딩 박스를 무분별하게 판단하여 정확도가 매우 낮고 가독성이 떨어지는 결과가 발생
     
-    ![스크린샷 2024-04-12 오후 3.33.11.png](./4차미니프로젝트/쿨루프 시공 대상 여부 분류/스크린샷 2024-04-12 오후 3.33.11.png)
+    ![스크린샷 2024-04-12 오후 3 33 11](https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/bf1d5fe8-25cc-46a3-b927-d241d962b312)
     
 - 이를 보완하기 위해서 IoU와 confidence score를 수정
 - 모델은 총 두 가지로 Nontransfer learning model과 Transfer learning model(YOLOv8)를 비교하였음
@@ -31,18 +31,18 @@
 - Nontransfer learning model
     - 건물에 대해 비교적 Bounding Box를 잘 찾는 것을 확인할 수가 있음
         
-        ![스크린샷 2024-04-12 오후 3.33.50.png](./4차미니프로젝트/쿨루프 시공 대상 여부 분류/스크린샷 2024-04-12 오후 3.33.50.png)
+        <img width="614" alt="스크린샷 2024-04-12 오후 3 33 50" src="https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/d4a1eff9-7214-4dc9-96c0-f41576c6916d">
         
 - Transfer learning model
     - 반면, Bounding box를 아예 잡지 못하는 것을 확인할 수 있었음
         
-        ![스크린샷 2024-04-12 오후 3.33.59.png](./4차미니프로젝트/쿨루프 시공 대상 여부 분류/스크린샷 2024-04-12 오후 3.33.59.png)
+        ![스크린샷 2024-04-12 오후 3 33 59](https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/ade8ee7d-ef7f-4e63-9d13-09985106d68d)
         
     - 아마, 위성 사진에 대해 훈련이 되어있지 않기 때문에 성능이 좋지 않은 것으로 생각됨
     
     → 따라서 .tune() 메소드를 활용하여 하이퍼파라미터 튜닝을 하기로 함. 이 과정에서 성능이 가장 좋은 모델을 best model로 선정하여 학습 및 예측을 진행시킴
     
-    ![스크린샷 2024-04-12 오후 3.34.37.png](./4차미니프로젝트/쿨루프 시공 대상 여부 분류/스크린샷 2024-04-12 오후 3.34.37.png)
+    <img width="1135" alt="스크린샷 2024-04-12 오후 3 34 37" src="https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/7cc947aa-72e3-4991-b1de-9025e15f3b76">
     
     - 그 결과, Detection은 물론이고 Classification도 훌륭하게 해내는 것을 확인할 수 있었음
     
