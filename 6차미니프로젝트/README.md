@@ -36,13 +36,15 @@
     - 하지만 그래프 결과, 딱히 상관이 없는 것으로 판단됨
     - 상관관계는 -0.24316879234321337
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e81b6490-64f0-4868-94c8-f9c1978f04a3/1ffa6611-190e-4857-80cd-c4e7c2fb4455/Untitled.png)
+    ![Untitled](https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/69d745f3-cef1-4019-ab29-37278b5110f2)
+
     
 - products : 상품 목록
     - 3번(DB001, Beverage, Drink)
         - DB001의 데이터 Decomposition
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e81b6490-64f0-4868-94c8-f9c1978f04a3/400c8e6f-a0fb-4418-8ab1-e4d1e694fe3d/Untitled.png)
+        ![1](https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/013e2d8d-3aaa-4856-8732-0fc84b2d9e56)
+
         
         - SubCategory Beverage 상품은  DB001 하나만 존재
         - Category가 Drink인 SubCategory는 Beverage, Wine이 존재
@@ -51,7 +53,8 @@
     - 12번(GA001, Milk, Food)
         - GA001의 데이터 Decomposition
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e81b6490-64f0-4868-94c8-f9c1978f04a3/f5d4121e-a782-4031-9581-c89159c949a5/Untitled.png)
+        ![2](https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/adad9868-2cb1-4e87-b6d3-e4c682023deb)
+
         
         - SubCategory milk 상품은 GA001 하나만 존재
         - Category가 Food인 SubCategory는 Bakery, Frozen, Yogurt, Prepared가 존재
@@ -60,20 +63,23 @@
     - 42번(FM001, Agricultural products, Grocery)
         - FM001의 데이터 Decomposition
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e81b6490-64f0-4868-94c8-f9c1978f04a3/ec4d544c-c190-4f34-bf37-3bb794b59eec/Untitled.png)
+        ![3](https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/d009c823-b768-4520-b6aa-96570d2d4829)
+
         
         - FM001 하나만 존재
         - 겨울철에 판매량이 매우 떨어지는 것을 확인할 수 있었다. → 아마 농산품이기 때문에 공급 역시 떨어지는 것이 원인이 아닐까 생각이 듦
     - 세 가지 데이터 비교(GA001 → DB001 → FM001)
     - 대부분 토, 일요일에 판매량이 많았음. 의외로 금요일이 적고 월요일이 3번째로 많았으며, 수요일도 꽤나 많음. 가장 적은 날은 목요일
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e81b6490-64f0-4868-94c8-f9c1978f04a3/a713022b-8763-4331-855a-83d3858c2421/Untitled.png)
+    ![4](https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/5ba6c716-3293-4477-aaba-963b0bea7bbc)
+
     
 - orders_train : 매장별 구매량
     - 방문 고객수와 상품 판매량은 관계가 있는 것으로 보여짐
     - 상관관계는 0.6698874743950217
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e81b6490-64f0-4868-94c8-f9c1978f04a3/211a0028-ebf8-48c3-b3e1-5d7c3db1c08d/Untitled.png)
+    ![5](https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/81238738-92ef-4a84-9927-1b558b2fd827)
+
     
 - sales_train : 매장별 상품 상세 구매량
 - stores : 매장별 위치 및 타입
