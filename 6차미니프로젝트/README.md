@@ -109,12 +109,14 @@
         - 실제로 주마다 우유 소비량이 유의하게 차이나는 것을 확인할 수 있음
         - 미네소타 주(target인 44번 가게가 위치)는 미국 내에서 낙농업 규모가 큰 곳
             
-            ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e81b6490-64f0-4868-94c8-f9c1978f04a3/74166d16-c25a-47b0-89e6-c5eea6133ad3/Untitled.png)
+        ![12](https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/25d8c0d6-9ee4-4e18-b815-84b881965426)
+
             
         - 근데 이 접근 방법은 잘못되었음. 주마다 가게 분포가 동일한 것이 아니라 미네소타가 제일 많기 때문에 총 합이 아닌 평균치로 분석해야함
         - 근데 그래도 미네소타가 가장 우유 소비량이 높다
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e81b6490-64f0-4868-94c8-f9c1978f04a3/e9ec3855-d6fb-40ec-b8e4-0169b450eb07/Untitled.png)
+        ![13](https://github.com/justgotothedesk/KT_AIVLE/assets/114928709/9d84d789-d6e1-4fcc-9b41-f33b19c32ee2)
+
         
 - 42번
     - 휘발유 값이 감소할 때, 상품 구매량 역시 감소하고 휘발유 값이 증가할 때, 상품 구매량 역시 증가한다.
