@@ -143,3 +143,26 @@
     
 - 42번
     - 12번과 결과가 유사하다
+
+# Feature 재선정
+
+1월 1일은 신년이기 때문에 1월 1일의 판매량은 없음
+
+- 3번(BAKERY)
+    - Qty, WTI_Price, CustomerCount, Price, Weekend(주말 여부), Holiday(공휴일 여부), B_Friday(블랙프라이데이 여부), Total_Sales, target
+- 12번(Milk)
+    - Qty, WTI_Price, Year, Month, Day, Spring, Summer, Autumn, Winter, target
+- 42번
+    - Qty, CustomerCount, Year, Month, Day, Day_of_week, Day_of_week2, isWinter, isSummer, target
+
+# 모델링
+
+- 이전 모델링을 토대로 생각해보았을 때, 문제는 44번의 3, 12, 42번의 상품만 예측한다는 것
+- test 데이터가 25142개인데, 모두 44번 가게가 아니라는 점이 신경쓰인다
+- 그러면, 주(State) 데이터로 학습을 할 수 없는 것 아닌가. 그리고 학습할 데이터도 상당히 작아지기 때문에 3, 12, 42번의 데이터를 나누어서 학습하는 게 아니라, 동일한 columns을 지정하여 합쳐서 학습하면 더 성능이 좋아질 듯하다. → But 학습 결과 매우 정확도가 낮은 모습
+- 3번
+    - 노트북 파일 참고
+- 12번
+    - 노트북 파일 참고
+- 42번
+    - 노트북 파일 참고
